@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Movie App</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="spn_title">Genres</string>
+    <string name="api_key">k_88acdw9f</string>
+    <string name="youtube_key">AIzaSyC6fmBnoZL4GdnRomlawlPon_EHgkaNLHM</string>
+</resources>

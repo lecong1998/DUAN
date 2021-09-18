@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/anhnentdoc"
+    tools:context=".presenter.detail.DetailActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/detail_activity_image_film"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/intro_image"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <TextView
+            android:id="@+id/detail_activity_tv_detail_film"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:fontFamily="@font/aclonica"
+            android:gravity="center"
+            android:text="Films"
+            android:textColor="#F2F2F2"
+            android:textSize="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/detail_activity_image_film"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <Button
+            android:id="@+id/detail_activity_btn_watch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/aclonica"
+            android:text="Watch"
+            android:background="#673AB7"
+            app:layout_constraintTop_toBottomOf="@id/detail_activity_tv_detail_film"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/detail_activity_ln"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/detail_activity_btn_watch"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/detail_activity_btn_add_favorite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_add" />
+
+                <TextView
+                    android:id="@+id/detail_activity_tv_add_favorite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="Favorite"
+                    android:textColor="@color/white"
+                    android:textSize="15dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/detail_activity_btn_share"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_share" />
+
+                <TextView
+                    android:id="@+id/detail_activity_tv_share"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Share"
+                    android:textColor="@color/white"
+                    android:textSize="15dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <RatingBar
+            android:layout_gravity="center"
+            android:id="@+id/detail_activity_rating"
+            style="@style/Widget.AppCompat.RatingBar.Indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:isIndicator="false"
+            android:numStars="10"
+            android:stepSize="1.0"
+            android:background="@color/white"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/detail_activity_ln" />
+
+        <TextView
+            android:id="@+id/detail_activity_tv_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Content"
+            android:textColor="@color/white"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/detail_activity_rating" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/detail_activity_tv_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/aclonica"
+                android:text="Information"
+                android:textColor="#F2F2F2"
+                android:textSize="20dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/detail_activity_rc_actor"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginLeft="20dp" />
+
+            <TextView
+                android:id="@+id/detail_activity_tv_director"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/aclonica"
+                android:hint="Director"
+                android:textColor="#F2F2F2"
+                android:textColorHint="#F2F2F2" />
+
+            <TextView
+                android:id="@+id/detail_activity_tv_genre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/aclonica"
+                android:hint="genres Date"
+                android:textColor="#F2F2F2"
+                android:textColorHint="#F2F2F2" />
+
+            <TextView
+                android:id="@+id/detail_activity_tv_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/aclonica"
+                android:hint="Manufacturing Date"
+                android:textColor="#F2F2F2"
+                android:textColorHint="#F2F2F2" />
+
+            <TextView
+                android:id="@+id/detail_activity_tv_country"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/aclonica"
+                android:hint="Country"
+                android:textColor="#F2F2F2"
+                android:textColorHint="#F2F2F2" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
